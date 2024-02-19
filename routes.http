@@ -1,0 +1,11 @@
+GET http://localhost:3333/postagens
+
+###
+
+POST http://localhost:3333/postagens
+Content-Type: application/json
+
+{
+  "title": "Primeira postagem",
+  "postagem": "Primeira postagem do blog testando uma criação de API basica (para treino)"
+}
