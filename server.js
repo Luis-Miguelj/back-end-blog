@@ -11,7 +11,7 @@ server.register( fastifyCors , {
 })
 
 
-server.get('/postagens', async (request, reply)=>{
+server.get('/', async (request, reply)=>{
   const search = request.query.search
 
   const postagens = await database.getPosts(search)
