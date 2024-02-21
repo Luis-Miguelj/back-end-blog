@@ -25,4 +25,14 @@ export class DatabasePostgres {
     })
 
   }
+
+  async edit(id, post){
+    const { title, postagem } = post
+
+    await sql`update posts set title=${title}, postagem=${postagem} WHERE id=${id}`
+  }
+
+  async delete( id ){
+    await sql`delete from posts WHERE id=${id}`
+  }
 }

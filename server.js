@@ -37,6 +37,28 @@ server.post('/postagens', async (request, reply)=>{
 
 })
 
+server.put('/:id', async (request, reply)=>{
+  const postagemId = request.params.id
+  const { title, postagem } = request.body
+
+  await database.edit(postagemId, {
+    title, 
+    postagem,
+  })
+
+  return reply.status(204).send()
+
+})
+
+server.delete('/:id', async (request, reply)=>{
+  const postagemId = request.params.id
+
+  await database.delete(postagemId)
+
+  return reply.status(204).send()
+
+})
+
 server.listen(
   {
     host: '0.0.0.0',

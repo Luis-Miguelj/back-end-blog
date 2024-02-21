@@ -1,4 +1,4 @@
-GET http://localhost:3333/postagens
+GET http://localhost:3333/?search=
 
 ###
 
@@ -9,3 +9,15 @@ Content-Type: application/json
   "title": "Primeira postagem",
   "postagem": "Primeira postagem do blog testando uma criação de API basica (para treino)"
 }
+
+###
+PUT http://localhost:3333/ebf19eed-ff9c-434d-a3de-05687b740217
+Content-Type: application/json
+
+{
+  "title": "Quarta postagem",
+  "postagem": "Quarta postagem do blog testando uma criação de API basica (para treino)"
+}
+###
+
+DELETE http://localhost:3333/65246439-2b5e-4354-8f01-838abe8e11ec
