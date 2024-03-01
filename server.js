@@ -7,7 +7,7 @@ const database = new DatabasePostgres()
 
 server.register( fastifyCors , {
   origin: '*',
-  methods: ['GET']
+  methods: ['GET', 'POST', 'PUT','DELETE'],
 })
 
 
